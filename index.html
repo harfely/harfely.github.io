@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <title>Website Demo UAS</title>
+    <link rel="stylesheet" href="INDEX.css">
+</head>
+<body>
+    <?php
+        include 'koneksi.php';
+    ?>
+
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portofolio">Galery</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contak">contact Me</a></li>
+        </ul>
+    </nav>
+
+    <!--Section-->
+    <section id="home">
+        <div class="main">
+            <h1 class="headings">Welcome!!! <br> You can Create Your WEBSITE</h1>
+            <a href="konsultasi.php"><BUtton class="btn">
+                Here To Go
+            </BUtton></a>
+        </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about"> 
+        <h1 class="headings">ABOUT ME</h1>
+        <div id="pic">
+            <img src="foto/a2.png" alt="">
+           
+            <br>
+            <div class="intro">
+                <h2 style="color:white;">HARFELY LEIPARY</h2>
+                <p style="font-family: 'Handlee', cursive;  color:white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque molestias velit qui dolorum expedita veniam temporibus. Rerum voluptatum repudiandae cum ipsa quidem provident ducimus, amet consectetur quod odio, maxime iusto similique! Quidem optio natus molestias excepturi facilis? Est, iure sint quis, labore consectetur nulla blanditiis consequatur in unde id quisquam enim nihil dolorum doloremque explicabo atque ratione, eius ipsam autem culpa eos modi similique? Dolorem sequi dolore sed facere similique accusantium animi, temporibus esse! Dolorem, in voluptatem est optio, aperiam impedit harum soluta necessitatibus repellat explicabo aspernatur dolores quia! Quae natus est pariatur sint asperiores dolorem? Neque eius recusandae perspiciatis!</p>
+            </div>
+        </div>
+        <br><br><br>
+    </section>
+    <br><br>
+
+    <section id="portofolio">
+        <br>
+        <h1 class="headings">MY GALERY</h1>
+        <div class="galery">
+            <img src="foto/PC.jpeg" alt="">
+            <img src="foto/laptop.jpg" alt="">
+            <img src="foto/keyboard.jpg" alt="">
+            <img src="foto/MONITOR.jpeg" alt="">
+            <img src="foto/mouse.jpeg" alt="">
+        </div>
+    </section>
+
+    <section id="services">
+        <h1 class="headings">SERVICES</h1>
+        <div class="row">
+                <div class="box">
+                    <h1 class="headigs">Website Desing</h1>
+                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt amet laborum odio exercitationem, possimus fugit quae minima numquam neque!</p>
+                </div>  
+                <div class="box">
+                    <h1 class="headigs">UX/UI Desing</h1>
+                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt amet laborum odio exercitationem, possimus fugit quae minima numquam neque!</p>
+                </div>
+                <div class="box">
+                    <h1 class="headigs">Website DAtabase Desing</h1>
+                    <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt amet laborum odio exercitationem, possimus fugit quae minima numquam neque!</p>
+              <?php 
+                include "koneksi.php";
+
+                if(isset($_POST['submit']))
+                mysqli_query($koneksi, "INSERT INTO kontak set      
+                username = '$_POST[username]',
+                email = '$_POST[email]',
+                idea = '$_POST[idea]' ");
+
+                header("location:index.php")
+
+                ?>
+                </div>
+            </div>    
+    </section>         
+    <!-- Sesion start -->
+    <div class="contact-section" id="contak">
+        <div class="contact-info">
+            <div> <img src="foto/pin.png" alt="" height="16px" widht="16px"  color="white"></i> Jln.Pendidikan,  MAsohi, Indonesia </div>
+            <div> <img src="foto/email.png" alt="" height="16px" widht="16px" color="white"> leiparyharfely@gmail.com</div>
+            <div><img src="foto/call.png" alt="" height="16px" widht="16px" color="white">+62 8219 8345 926</div>
+            <div><img src="foto/time-left.png" alt="" height="16px" widht="16px" color="white"> Mon - Fri 8:00 AM to 5:00 PM</div>
+            
+        </div>
+        <div class="contact-form">
+            <h2>COntact Me</h2>
+            <form action="" class="contact" method="POST">
+                <input type="text" name="username" class="text-box" placeholder="Your Name" required>
+                <input type="email" name="email" class="text-box" placeholder="Your Email" required>
+                <textarea name="idea" id="" cols="30" rows="5" placeholder="Your idea" required></textarea>
+                <input type="submit" name="submit" class="send-btn" value="send"><a href="#home"></a></input>
+            </form>
+        </div>
+    </div>
+
+ 
+</body>
+</html>
