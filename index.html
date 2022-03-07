@@ -9,15 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
-    <title>Website Demo UAS</title>
+    <title>HARFELY LEIPARY</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <?php
-        include 'koneksi.php';
-    ?>
-
-
     <nav class="navbar">
         <ul>
             <li><a href="#">Home</a></li>
@@ -47,7 +42,11 @@
             <br>
             <div class="intro">
                 <h2 style="color:white;">HARFELY LEIPARY</h2>
-                <p style="font-family: 'Handlee', cursive;  color:white">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque molestias velit qui dolorum expedita veniam temporibus. Rerum voluptatum repudiandae cum ipsa quidem provident ducimus, amet consectetur quod odio, maxime iusto similique! Quidem optio natus molestias excepturi facilis? Est, iure sint quis, labore consectetur nulla blanditiis consequatur in unde id quisquam enim nihil dolorum doloremque explicabo atque ratione, eius ipsam autem culpa eos modi similique? Dolorem sequi dolore sed facere similique accusantium animi, temporibus esse! Dolorem, in voluptatem est optio, aperiam impedit harum soluta necessitatibus repellat explicabo aspernatur dolores quia! Quae natus est pariatur sint asperiores dolorem? Neque eius recusandae perspiciatis!</p>
+                <p style="font-family: 'Handlee', cursive;  color:white">
+                    Hallo,,,Saya Harfely Leipary.
+                    Saya adalah seorang mahasiswa yang sedang menempuh studi di Universitas Kristen Indonesia Maluku, Fakultas Ilmu Komputer, Program Studi Informatika.
+                    Kegemaran saya di bidang data,Semoga kita dapat berkolaborasi,,,terima kasih...!
+                </p>
             </div>
         </div>
         <br><br><br>
@@ -80,18 +79,6 @@
                 <div class="box">
                     <h1 class="headigs">Website DAtabase Desing</h1>
                     <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam deserunt amet laborum odio exercitationem, possimus fugit quae minima numquam neque!</p>
-              <?php 
-                include "koneksi.php";
-
-                if(isset($_POST['submit']))
-                mysqli_query($koneksi, "INSERT INTO kontak set      
-                username = '$_POST[username]',
-                email = '$_POST[email]',
-                idea = '$_POST[idea]' ");
-
-                header("location:index.php")
-
-                ?>
                 </div>
             </div>    
     </section>         
