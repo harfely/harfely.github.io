@@ -308,75 +308,21 @@
   }
 
   /*untuk layar device berukuran kecil*/
-@media screen and (min-width: 450px) {
+@media screen and (min-width: 250px) {
   .box{
-    width: 400px;
-    height: 300px;
+    width: 200px;
+    height: 50px;
   }
   .navbar {
     height: 40px;
   }
   .navbar ul li{
-    display: inline-block;
-    font-size:8px;
+
+    font-size:5px;
   }
   .contact-info{
-    font-size: 10px;
+    font-size: 5px;
   }
-  .contact-form{
-    margin-right: 50px;
-    margin-top: -100px;
-  }
-  .contact-info, .contact-form{
-    flex: 1;
-  }
-  .contact-form h2{
-    font-size: 35px;
-  }
-  .contact-form .text-box{
-    width: calc(50% - 10px);
-    height: 50px;
-    padding: 12px;
-    font-size: 15px;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    opacity: 0.9;
-    z-index: 1;
-    text-transform: uppercase;
-  }
-  .contact-form .text-box:first-child{
-    margin-right: 15px;
-  }
-  .contact-form textarea{
-    width: 100%;
-    padding: 12px;
-    font-size: 12px;
-    min-height: 200px;
-    max-height: 400px;
-    resize: vertical;
-    border-radius: 5px;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    opacity: 0.9;
-    z-index: 1;
-    text-transform: uppercase;
-  }
-  .contact-form .send-btn{
-    float: right;
-    background: rgb(20, 20, 20);
-    color: #ffff;
-    border: none;
-    width: 120px;
-    height: 40px;
-    font-size: 15px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3S;
-}
 
 /*untuk layar device berukuran sedang*/
 @media screen and (min-width: 550px) {
